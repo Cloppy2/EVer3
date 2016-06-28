@@ -1,0 +1,333 @@
+\documentclass[10pt]{article}
+%\usepackage[utf8]{inputenc}
+\usepackage[font=footnotesize]{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ngerman}
+\usepackage{listingsutf8}
+\usepackage{booktabs}
+\usepackage[version=3]{mhchem}
+\usepackage{subfigure} % fÃ¼r Plots nebeneinander
+\usepackage{textcomp} % für \textmu !!!
+\usepackage{dcolumn} % für Ausrichtung am Komma
+
+
+\begin{document}
+
+%\sffamily % TEST Schriftart
+
+\thispagestyle{empty}
+\begin{center}
+
+\begin{center}
+\includegraphics[width=.3\textwidth]{husiegel_sw_op}\\[0.6cm]
+%\textsc{\LARGE HU BERLIN}\\[1.3cm]
+\end{center}
+
+{\huge \textbf{E-Praktikum}}\\[6mm]
+{\huge \textbf{Operationsverst"arker}}\\[13mm]
+
+\begin{tabbing}
+absatzabsatzabsatz\= mehr \kill
+\> \textit{Betreuer:}\\
+\> Martin Handwerg\\
+\> Stefan Weidemann\\[2mm]
+\> \textit{Datum:}\\\> 30.06.2016\\[2mm]
+%\> \textit{Raum:}\\\> 0'107, Newtonstra"se 15, HU Berlin \\[2mm]
+\> \textit{Verfasser:} \\
+\> Ian Clotworthy (519006)\\
+\> Stefan M"oller (164903)\\[2mm]
+\end{tabbing}
+\end{center}
+\vskip 5ex
+\renewcommand
+\abstractname{Abstract}
+\begin{abstract}
+
+In diesem Versuch wurden Operationsverst"arker aufgebaut und ihre Funktionen wurden 
+%Gegenstand dieses Versuchs/von diesem Versuch
+%Im Rahmen dieses Versuchs
+%(Die) Laserspektroskopie
+%Im folgenden (Versuch)
+%Mithilfe/Mittels
+
+
+\end{abstract}
+
+\newpage 
+
+%\rmfamily  %%% TEST Schriftart
+
+\tableofcontents
+\newpage
+
+%%%
+%%%
+%%%
+
+\newpage
+\section{Einf"uhrung}
+\subsection{Interner Bestandteile}
+Intern besteht ein Operationsverst"arker (OPV) aus drei Verst"arkerstufen. Die Eingangsstufe besteht unter anderem aus zwei Transistoren T1 und T2, zwischen deren Basen die Eingangsspannung $U_1$ angelegt wird. Bei $U_1=0V$ ist eine Ausgangsspannung von $U_Q=0V$ w"unschenswert. Die Verst"arkung der ersten Stufe ist rund um $\beta \approxeq 150$.
+
+%%% AUSWERTUNG UND DISKUSSION %%%
+\section{Dioden}
+
+
+\subsection{Strom-Spannungs-Kennlinien} % !!!
+
+
+
+
+
+
+\subsection{Differentieller Widerstand einer Diode}
+
+
+\newpage
+
+\section{Bipolartransistor}
+\subsection{Kennlinien}
+
+
+\subsection{Emitterschaltung ohne Gegenkopplung}
+
+
+\subsection{Emitterschaltung mit Gegenkopplung}
+
+%\vskip 1cm
+\begin{thebibliography}{4}
+\bibitem{weiß}O. Chiatti, \textit{Versuchsanleitung Versuch 2: Bipolartransistoren}, (2016)
+\bibitem{rot}E. Hering, K. Bressler, J. Gutekunst, \textit{Elektronik f"ur Ingenieure und Naturwissenschaftler}, Springer-Verlag, Berlin (2014)
+\bibitem{weinrot}M. Marinescu, J. Winter, \textit{Basiswissen Gleich- und Wechselstromtechnik}, Vieweg, Wiesbaden (2007)
+\bibitem{orange}Go"sner, \textit{Grundlagen der Elektronik (Halbleiter, Bauelemente und Schaltungen)}, Shaker Verlag, Aachen (2007) % !!!
+\bibitem{transparent}http://www.elektronik-kompendium.de/sites/bau/0201111.htm, 21.06.2016
+%\bibitem {schwarz} Dinkelaker, Mandel: Versuchsanleitung im F-Praktikum Physik \textit{Laserspektroskopie an Rubidiumgas}, 2016
+%\bibitem {blau} Dr. Uwe M"uller: Physikalisches Grundpraktikum. Einf"uhrung in die Messung. Auswertung und 
+%Darstellung experimenteller Ergebnisse in der Physik, 2007
+%\bibitem {hellbunt} Steck, D. A. (2010): Rubidium 87 D Line Data; \textit{http://steck.us/alkalidata/rubidium87numbers.pdf}
+% \bibitem {bunt} Demtršder, W. (2010): Experimentalphysik 3 - Atome, MolekŸle und Festkšrper (Abschnitt 10.2.7)
+%\bibitem {gelb} Demtršder, W. (2011): Laserspektroskopie 1 (Abschnitt 3.2, Doppler-Verbreiterung und Abschnitt 5.6.1, Halbleiterlaser)
+
+\end{thebibliography}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendix}
+\section{Aufgenommene Messwerte} % !!!
+
+
+\begin{table}[h!]
+\begin{center}
+\caption{Messwerte f"ur die IU-Kennlinien einer Si-Diode}
+\begin{tabular}{rr@{,}lr@{,}l}
+\toprule
+$U_0$/V & \multicolumn{2}{r}{$U_D$/V} & \multicolumn{2}{r}{$U_R$/V}\\
+\midrule
+2	&0&605&		1&48\\
+4	&0&645&		3&43\\
+6	&0&665&		5&36\\
+8	&0&679&		7&35\\
+10	&0&69&		9&38\\
+12	&0&698&		11&33\\
+14	&0&705&		13&31\\
+16	&0&711&		15&27\\
+18	&0&716&		17&3\\
+20	&0&719&		19&23\\
+22	&0&724&		21&2\\
+24	&0&727&		23&2\\
+26	&0&73&		25&3\\
+28	&0&732&		27&2\\
+30	&0&734&		29&3\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Messwerte f"ur die IU-Kennlinien einer Z-Diode}
+\begin{tabular}{rr@{,}lr@{,}l}
+\toprule
+$U_0$/V & \multicolumn{2}{r}{$U_D$/V} & \multicolumn{2}{r}{$U_R$/V}\\
+\midrule
+2	&1&947&		0&088\\
+4	&3&62&		0&425\\
+6	&4&57&		1&455\\
+8	&4&89&		3&13\\
+10	&5&01&		5&05\\
+12	&5&08&		6&99\\
+14	&5&11&		8&91\\
+16	&5&14&		10&88\\
+18	&5&16&		12&81\\
+20	&5&17&		14&8\\
+22	&5&19&		16&81\\
+24	&5&2&		18&78\\
+26	&5&21&		20&8\\
+28	&5&22&		22&8\\
+30	&5&23&		24&7\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Messwerte f"ur die IU-Kennlinien einer LED}
+\begin{tabular}{D{,}{,}{1}D{,}{,}{-1}D{,}{,}{1}}
+\toprule
+\multicolumn{1}{r}{$U_0$/V} & \multicolumn{1}{r}{$U_D$/V} & \multicolumn{1}{r}{$U_R$/mV}\\
+\midrule
+0,2&	0,202&		0\\
+0,5&	0,539&		0\\
+0,8&	0,785&		0\\
+0,9&	0,928&		0,1\\
+1&	1,07&		0,1\\
+1,1&	1,165&		0,1\\
+1,2&	1,229&		0,2\\
+1,3&	1,348&		1,8\\
+1,4&	1,436&		12,9\\
+1,5&	1,489&		47,1\\
+1,6&	1,532&		132\\
+1,7&	1,55&		206\\
+1,8&	1,557&		244\\
+1,9&	1,574&		374\\
+2&	1,584&		469\\
+2,1&	1,592&		554\\
+2,2&	1,597&		631\\
+2,4&	1,611&		848\\
+2,6&	1,619&		993\\
+2,8&	1,629&		1209\\
+3&	1,639&		1445\\
+3,2&	1,646&		1641\\
+3,4&	1,65&		1786\\
+3,6&	1,656&		1974\\
+3,8&	1,661&		2170\\
+4&	1,667&		2370\\
+4,2&	1,673&		2610\\
+4,4&	1,677&		2810\\
+4,6&	1,682&		3000\\
+4,8&	1,685&		3150\\
+5&	1,69&		3400\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Messwerte f"ur die Ermittlung des differentiellen Widerstands einer Si-Diode bei einer angelegten Wechselspannung von $u_{0,ac}$=50\,mV$_\textrm{rms}$}
+\begin{tabular}{rD{,}{,}{-1}D{,}{,}{1}D{,}{,}{1}}
+\toprule
+\multicolumn{1}{r}{$U_{0,dc}$/V} & \multicolumn{1}{r}{$U_R$/V} & \multicolumn{1}{r}{$u_{ac}$/mV$_\textrm{rms}$} &  \multicolumn{1}{r}{$u_D$/mV$_\textrm{rms}$}\\
+\midrule
+5 & 4,41 & 52,3 & 6,2\\
+10 & 9,45 & 54,1 & 3,1\\
+15 & 14,42 & 54,7 & 2\\
+20 & 19,39 & 55 & 1,8\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Messwerte f"ur die Ermittlung des differentiellen Widerstands einer Si-Diode bei einer angelegten Wechselspannung von $u_{0,ac}$=500\,mV$_\textrm{rms}$}
+\begin{tabular}{rD{,}{,}{-1}D{,}{,}{1}D{,}{,}{1}}
+\toprule
+\multicolumn{1}{r}{$U_{0,dc}$/V} & \multicolumn{1}{r}{$U_R$/V} & \multicolumn{1}{r}{$u_{ac}$/mV$_\textrm{rms}$} &  \multicolumn{1}{r}{$u_D$/mV$_\textrm{rms}$}\\
+\midrule
+5 & 4,58 & 438 & \approx300\\
+10 & 9,39 & 554 & \approx40\\
+15 & 14,33 & 564 & \approx20\\
+20 & 19,38 & 568 & \approx15\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+% 3.3.3 Tabelle
+%\begin{table}
+%\begin{center}
+%\caption{lorem ipsum}
+%\begin{tabular}{D{1}{,}{,}D{1}{,}{,}D{1}{,}{,}}
+%\toprule
+%\multicolumn{1}{r}{$f$/Hz} & \multicolumn{1}{r}{$U_e$/mV$_{\textrm{pp}}$} & \multicolumn{1}{r}{$U_a$/V$_{\textrm{pp}}$}\\
+%\multicolumn{1}{r}{$f$/Hz} & \multicolumn{1}{r}{$U_e$} & \multicolumn{1}{r}{$U_a$}\\
+%\midrule
+%1,0 & 12,0 & 0,24\\
+%10 & 12,8 & 0,40\\
+%20 & 14,4 & 0,96\\
+%100 & 30 & 2,68\\
+%1\,k & 28,8 & 2,74\\
+%10\,k & 33,6 & 2,74\\
+%20\,k & 30 & 2,72\\
+%1\,M & 25,6 & 2,08\\
+%2\,M & 22,6 & 1,24\\
+%2,5\,M & 24,2 & 1,06\\
+%3\,M & 22,4 & 0,9\\
+%\bottomrule
+%\end{tabular}
+%\end{center}
+%\end{table} % !!!
+
+
+% !!!
+% 3.4 Tabelle stichprobenartige Überprüfung der Verstärkung
+\begin{table}
+\begin{center}
+\caption{stichprobenartige "Uberp"ufung der Verst"arkung}
+\begin{tabular}{rrr}
+\toprule
+$f$/Hz & $U_e$/mV$_{\textrm{pp}}$ & $ U_a$/mV$_{\textrm{pp}}$\\
+\midrule
+10 & 9 & 80\\
+30 & 25 & 250\\
+50 & 20 & 310\\
+100 & 25 & 340\\
+100000 & 25 & 320\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table} % !!!
+
+\end{appendix}
+
+\end{document}
+
+
+%%%   %      %   %%%    %%% 
+%         %%   %   %    %   %
+%%%   % %  %   %     %  %%%
+%         %   %%   %     %  %
+%%%   %      %   %%%    %%%
+
+
+%%% Grafik %%%
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=100mm]{}
+    \caption{}
+   \end{center}
+\end{figure}
+
+
+%%% Tabelle %%% 
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{rrrrrr}
+\toprule
+$\theta [^\circ] $ & $\psi [^\circ]$ & $\Delta [^\circ]$ & $n_W$[\textendash] & n [\textendash] & $\kappa$ [\textendash] \\
+\midrule
+46 & 11,47 & 180,33 & 1,335 & 1,335 & 0,002 \\
+50 & 5,18 & 179,53 & 1,337 & 1,336 & 0,001 \\
+56 & 4,62 & 0,34 & 1,335 & 1,334 & 0,001 \\
+60 & 10,53 & 6,04 & 1,346 & 1,346 & 0,032 \\
+\bottomrule
+\end{tabular}
+\caption{Brechungsindex und Extinktionskoeffizient von Wasser, ermittelt "uber die Messung von Ellipsometerwinkel $\psi$ und Phasenverschiebung $\Delta$ eines an der Grenzfl"ache Luft-Wasser reflektierten Laserstrahls f"ur verschiedene Einfallswinkel $\theta$. Berechnung der Werte in Spalte vier nach Formel (3), in den letzten beiden Spalten durch die auf dem am Arbeitsplatz befindlichen PC installierte Analyse-Software.}
+\end{center}
+\end{table}
+
+
+\\\\
