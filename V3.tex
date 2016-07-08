@@ -33,7 +33,7 @@ absatzabsatzabsatz\= mehr \kill
 \> Martin Handwerg\\
 \> Stefan Weidemann\\[2mm]
 \> \textit{Datum:}\\\> 30.06.2016\\[2mm]
-%\> \textit{Raum:}\\\> 0'107, Newtonstra"se 15, HU Berlin \\[2mm]
+\> \textit{Raum:}\\\> 0'304, Newtonstra"se 15, HU Berlin \\[2mm]
 \> \textit{Verfasser:} \\
 \> Ian Clotworthy (519006)\\
 \> Stefan M"oller (164903)\\[2mm]
@@ -68,32 +68,114 @@ In diesem Versuch wurden Operationsverst"arker aufgebaut und ihre Funktionen wur
 \newpage
 \section{Einf"uhrung}
 \subsection{Interner Bestandteile}
-Intern besteht ein Operationsverst"arker (OPV) aus drei Verst"arkerstufen. Die Eingangsstufe besteht unter anderem aus zwei Transistoren T1 und T2, zwischen deren Basen die Eingangsspannung $U_1$ angelegt wird. Bei $U_1=0V$ ist eine Ausgangsspannung von $U_Q=0V$ w"unschenswert. Die Verst"arkung der ersten Stufe ist rund um $\beta \approxeq 150$.
+Intern besteht ein Operationsverst"arker (OPV) aus drei Verst"arkerstufen (Abb. 1). Die Eingangsstufe besteht unter anderem aus zwei Transistoren T1 und T2, zwischen deren Basen die Eingangsspannung $U_1$ angelegt wird. Bei $U_1=0V$ ist eine Ausgangsspannung von $U_Q=0V$ w"unschenswert. Die Verst"arkung der ersten Stufe ist rund um $\beta \approx 150$.
 
 %%% AUSWERTUNG UND DISKUSSION %%%
-\section{Dioden}
+\section{Anwendung von OPVs}
 
+\subsection{Nicht-invertierender Verst"arker} % !!!
+Die Schaltung wurde zuerst in Multisim mit einem OPV LM358 aufgebaut (Abb. 2). Die Widerst"ande $R_1=1k \Omega$ und $R_2=20k \Omega$ wurden gew"ahlt, um die erw"unschte 20-facher Verst"arkung zu erzielen. Es wurde eine Versorgungsspannung von $U_{dc}=\pm 12V$ angelegt, welche auch f"ur den restlichen Versuch gilt. Hier wurde der Bodeplot aufgenommen (Abb. 3), und Werte f"ur die Grenzfrequenz und Ein- und Ausgangswiderstand wurden durch Einsetzen eines Potentiometers gemessen. Ergebnisse:
 
-\subsection{Strom-Spannungs-Kennlinien} % !!!
+\begin{center}
+$f_g=Hz$ \\
+$f_T=Hz$ \\
+$R_{ein} = \Omega$ \\
+$R_{aus} = \Omega$ \\
+\end{center}
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=100mm]{OPV.png}
+    \caption{Simulierter nicht-invertierender Verst"arker}
+   \end{center}
+\end{figure}
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=100mm]{31}
+    \caption{Bodeplot: nicht-invertierender Verst"arker}
+   \end{center}
+\end{figure}
 
+Dann wurde die gleiche Schaltung aufgebaut, und die gleichen Gr"o"sen gemessen. Die Ergebnisse
+\begin{center}
+$f_g=Hz$ \\
+$f_T=Hz$ \\
+$R_{ein} = \Omega$ \\
+$R_{aus} = \Omega$ \\
+\end{center}
+Die reele Schaltung approximiert die Simulation gut.
+\subsection{Impedanzwandler}
+Zuerst wurden zwei RC-Glieder in Reihe geschaltet, um einen Tiefpass 2. Ordnung herzustellen. Dessen Bodeplot wurde aufgenommen (Abb. 4).\\
 
+Um die Bedingungen $R_1=\infty, R_2=0$ zu approximieren, wurde $R_1$ von der vorherigen Schaltung entfernt, und anstelle von $R_2$ wurde ein Kurzschluss gebaut. Dieser Impedanzwandler wurde zwischen die Tiefp"asse geschaltet, und der Bodeplot wurde erneut aufgenommen, um den Unterschied vom Tiefpass 2. Ordnung festzustellen.
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=100mm]{311}
+    \caption{Bodeplot: Vergleich von Impedanzwandler und RC-Glied 2. Ordnung. }
+   \end{center}
+\end{figure}
 
-\subsection{Differentieller Widerstand einer Diode}
-
+Wie der Abbildung zu entnehmen ist, der Einbau der Impedanzwandler verschiebt die Grenzfrequenz des RC Glieds nach oben. Es f"allt auf. dass $\delta$-Funktion-artige Peaks bei vielfachen von 50kHz auftauchen.
 
 \newpage
 
-\section{Bipolartransistor}
-\subsection{Kennlinien}
+\subsection{Invertierender Verst"arker} % !!!
+Die Schaltung wurde zuerst in Multisim aufgebaut (Abb. 5). Die Widerst"ande wurden gew"ahlt, um die erw"unschten Verst"arkungen zu erzielen. Diese wurden als 1, 100 und 10000 vorgeschrieben. Hier wurden die Bodediagrammen aufgenommen (Abb. 6), und Werte f"ur die Grenzfrequenz und Ein- und Ausgangswiderstand wurden durch Einsetzen eines Potentiometers gemessen. Ergebnisse:\\
+
+\begin{table}[h!]
+\begin{center}
+\caption{Verwendete Gr"o"sen und Messwerte der simulierten nicht-invertierenden Verst"arker}
+\begin{tabular}{rrrrrrr}
+\toprule
+Max. Verst"arkung & $R_1 k\Omega$ & $R_2  k\Omega$ & $R_{ein} \Omega$ & $R_{aus} \Omega$ & $f_g$ Hz & $f_T$ Hz\\
+\midrule
+1	& 1 & 1 & 1337	&  & &\\
+100	& 0,1 & 10 & 282 &  & &\\
+10000 &  & 150 &  &  & &\\
+
+Treibt man die simulierte Schaltung in die "Ubersteuerung, \\%%% bitte irgendwas hier schreiben!
+
+Die entsprechenden reelen Schaltungen wurden gebaut und auf die gleichen Eigenschaften gemessen. Ergebnisse:\\
+
+\begin{table}[h!]
+\begin{center}
+\caption{Verwendete Gr"o"sen und Messwerte der reelen nicht-invertierenden Verst"arker}
+\begin{tabular}{rrrrrrr}
+\toprule
+Max. Verst"arkung & $R_1 k\Omega$ & $R_2  k\Omega$ & $R_{ein} \Omega$ & $R_{aus} \Omega$ & $f_g$ Hz & $f_T$ Hz\\
+\midrule
+1	& 1 & 1 & 1337	& 13 & &\\
+109	& 0,1 & 15 & 282 & 120 & &\\
+3154 & 0,012 & 150 & - & 170 & &\\
+
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=100mm]{32}
+    \caption{Bodeplot: invertierender Verst"arker. Drei verschiedene Verst"arkungen. Durchgezogene Linien sind aus der Simulation, und zum Vergleich, die Datenpunkte aus den entsprechenden reelen Schaltungen. Bei h"oheren Frequenzen stimmen sie meist nicht mehr "uberein.}
+   \end{center}
+\end{figure}
+
+Wie in der Abbildung zu sehen ist, es ist uns nicht gelungen, bei der reelen Schaltung eine Verst"arkung von 10000 zu bekommen. Die Ausgangsspannung war auf 24$V_{pp}$ begrenzt, und der OPV d"urfte mit maximal 16$V_{dc}$ versorgt werden. Es wurde eine Versorgungsspannung von $U_{dc}=\pm 15V$ ausnahmsweise angelegt.  \\
 
 
-\subsection{Emitterschaltung ohne Gegenkopplung}
+\section{Eigenschaften und Grenzen}
+\subsection{Eingangsfehlspannung}
+Eingangsfehlspannung ist die Spannung, die in der ersten OPV Stufe bei ausgeschalteten Eingangssignal auftaucht. Diese wurde mit dem DMM gemessen. Es wurde $U_{EFS}=mV$ gemessen.
 
+\subsection{Frequenzgang der Leerlaufverst"arkung}
+Die Leerlaufverst"arkung ist typischerweise sehr hoch, weshalb das Bodeplot (Abb.4, 10000-Kurve). Dabei war $f_T \approx 1$ MHz, und $f_g \approx 100$ Hz. Extrapolieren der Linie auf eine $f_g \approx 10$ Hz w"urde eine Leerlaufverst"arkung von etwa 100dB ausmachen.
 
-\subsection{Emitterschaltung mit Gegenkopplung}
+\subsection{Max. Anstiegsgeschwindigkeit}
+Es wurde eine invertierende Verst"arker mit Verst"arkung 10 gebaut. Ein Sinus-Signal von 2.12$V_{pp}$ wurde zugef"uhrt, damit der Ausgangsignal 20$V_{pp}$ betrug. Es wurde Frequenzen durchgelaufen. Bei 17kHz nahm der Ausgang eine dreieckige Form an. Die Slew Rate ist der Anstieg deren Kante: $\dfrac{U_a}{t}=0.67 V / \mu s$
+
+\subsection{Stabilit"at und Frequenzgang-Korrektur}
 
 %\vskip 1cm
 \begin{thebibliography}{4}
